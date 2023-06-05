@@ -1,0 +1,40 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/style_main.css" rel="stylesheet" type="text/css">
+    <script defer src="../static/js/img_gen.js" type="text/javascript" defer></script>
+    <title>Generate Images</title>
+</head>
+<body>
+
+<div>
+    <h2 id="titulo_gen">Generate Images</h2>
+
+    <form id="form_images">
+
+        <label id="Limage_width">Width:</label>
+        <input id="width" min="1" placeholder="Insert Width px" type="number">
+
+        <label id="Limage_height">Height:</label>
+        <input id="height" min="1" placeholder="Insert Height px" type="number">
+
+        <label id="Limage_gray">Gray:</label>
+        <input id="gray" type="checkbox">
+
+        <label id="Limage_blur">Blur(1-10):</label>
+        <input id="range_blur" max="10" min="0" step="1" type="range" value="0">
+
+        <input id="BtngenImg" type="submit" value="Generate Your Image">
+
+    </form>
+
+    <h2 id="idImg"></h2>
+
+    <img alt="" id="img">
+
+</div>
+</body>
+
+</html>
