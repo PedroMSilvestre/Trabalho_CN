@@ -184,6 +184,13 @@ def home():
         # É feito o redirecionamento para a página inicial
         return redirect(url_for("index"))
 
+# Relacionado com a página Random Image Generator
+@app.route("/imgen", methods=["POST","GET"])
+def imgen():
+    # É feito o render da página do Gerador de Imagens
+    return render_template("imgen.html")
+
+
 
 @app.route(rule="/upload", methods=['POST'])
 def saveFilesToBucketAndFileSystem():
