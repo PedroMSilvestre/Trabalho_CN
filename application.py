@@ -15,12 +15,21 @@ app.config["AWS_FOLDER"] = ".aws"
 # Chave secreta utilizada para proteger a sessão
 app.secret_key = "Trabalho_CN"
 
-# Para estabelecer uma conexão com a BD MySQL
+# Para estabelecer uma conexão com a BD MySQL Local
+"""
 theConnection = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
     password="",
 )
+"""
+# Para estabelecer uma conexão com a BD MySQL da AWS
+theConnection = mysql.connector.connect(
+    host="db-cn-trabalho.csnnr3s2quau.us-east-1.rds.amazonaws.com",
+    user="root",
+    password="passtrabalhocn",
+)
+
 
 if(theConnection):
     # Criação de um objeto "cursor" associado à conexão estabelecida com a BD MySQL
