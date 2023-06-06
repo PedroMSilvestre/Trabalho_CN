@@ -220,29 +220,6 @@ def saveFilesToBucketAndFileSystem():
         strFeedback+="\n"
     #for
 
-    # FileStoraObject.save often fails with relative local paths - so use absolute paths
-    strAbsoluteDestinationPath = os.path.join(
-        app.root_path,
-        app.config['UPLOAD_FOLDER']
-    )
-    dictLocalSaveResults = \
-        AmAwsS3Helper.saveFlaskUploadedPluralFilesToFileSystemPath(
-            pHtmlFileElementName=HTML_FILE_ELEMENT_NAME,
-            pStrAbsoluteDestinationPath=strAbsoluteDestinationPath  # absolute path, no problem
-        )
-
-    for strSecureFilename in dictLocalSaveResults.keys():
-        bSaveResult = dictLocalSaveResults[strSecureFilename]
-
-        if (bSaveResult):
-            strFeedback += "SUCCESS: File {} saved locally.".format(strSecureFilename)
-        else:
-            strFeedback += "FAILURE: File {} NOT saved locally.".format(strSecureFilename)
-        # else
-
-        strFeedback += "\n"
-    # for
-
     return render_template('home.html', username=session["username"], strFeedback=strFeedback)
 #def saveFilesToBucketAndFileSystem
 
