@@ -13,18 +13,18 @@ h2 {
     text-align: center;
 }
 
-.container {
-    width: 300px;;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.input_all{
+    margin-right: 20px;
+}
+
+.input_number{
+    width: 100px;
+}
+
+.div_elements{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 #BtngenImg {
@@ -37,8 +37,8 @@ h2 {
 #form_images {
     margin-top: 10px;
     position: absolute;
-    left: 42%;
-    transform: translate(-42%);
+    /* left: 42%; */
+    /* transform: translate(-42%); */
 }
 
 #range_blur {
@@ -62,59 +62,4 @@ h2 {
 
 #titulo_gen {
     margin-top: 20px;
-}
-
-.container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.container label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.container input[type="text"],
-.container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.container select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.container button {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.container input[type="submit"] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.container input[type="submit"]:hover {
-    background-color: #45a049;
 }

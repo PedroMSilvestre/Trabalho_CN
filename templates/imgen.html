@@ -8,36 +8,80 @@
     <!-- Ligação entre os ficheiro css e javascript -->
     <link href="../static/css/imgen.css" rel="stylesheet" type="text/css">
     <script defer src="../static/js/img_gen.js" type="text/javascript" defer></script>
+    <!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/iconic/css/material-design-iconic-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main_1.css">
+	<!--===============================================================================================-->
     <title>Generate Images</title>
 </head>
 <body>
+    <h2 id="titulo_gen" class="principal_title">Generate Images</h2>
+    <div class="div_elements">
+        <form id="form_images">
+            <label id="Limage_width">Width:</label>
+            <input id="width" min="1" placeholder="Insert Width px" type="number" class="input_all input_number">
 
-<div>
-    <h2 id="titulo_gen">Generate Images</h2>
+            <label id="Limage_height">Height:</label>
+            <input id="height" min="1" placeholder="Insert Height px" type="number" class="input_all input_number">
+        
+            <label id="Limage_gray">Gray:</label>
+            <input id="gray" type="checkbox" class="input_all">
 
-    <form id="form_images">
+            <label id="Limage_blur">Blur(1-10):</label>
+            <input id="range_blur" max="10" min="0" step="1" type="range" value="0" class="input_all">
+        
+            <!--<input id="BtngenImg" type="submit" value="Generate Your Image"> -->
+            
+            <div class="container-login100-form-btn">
+				<div class="wrap-login100-form-btn">
+					<div class="login100-form-bgbtn"></div>
+                    <button class="login100-form-btn" type="submit">
+						Generate Your Image	
+					</button>
+				</div>
+			</div>  
+        </form>
+    </div>    
 
-        <label id="Limage_width">Width:</label>
-        <input id="width" min="1" placeholder="Insert Width px" type="number">
-
-        <label id="Limage_height">Height:</label>
-        <input id="height" min="1" placeholder="Insert Height px" type="number">
-
-        <label id="Limage_gray">Gray:</label>
-        <input id="gray" type="checkbox">
-
-        <label id="Limage_blur">Blur(1-10):</label>
-        <input id="range_blur" max="10" min="0" step="1" type="range" value="0">
-
-        <input id="BtngenImg" type="submit" value="Generate Your Image">
-
-    </form>
-
-    <h2 id="idImg"></h2>
+    <h2 id="idImg" class="h2_img"></h2>
 
     <img alt="" id="img">
 
-</div>
+<!--===============================================================================================-->
+<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="../static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="../static/vendor/bootstrap/js/popper.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="../static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="../static/vendor/daterangepicker/moment.min.js"></script>
+<script src="../static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="../static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="../static/js/main.js"></script>
 </body>
 
 </html>

@@ -13,6 +13,7 @@ form_image.addEventListener('submit', function (event) {
     // ID Imagens vão de 0->1084
     var numeroAleatorio = Math.floor(Math.random() * 1085);
     IdImg.textContent = "ID: " + numeroAleatorio;
+    IdImg.style.marginTop = "150px";
 
     var url = `https://picsum.photos/id/${numeroAleatorio}/${width}/${height}`
     var url_gray = `https://picsum.photos/id/${numeroAleatorio}/${width}/${height}?grayscale`
