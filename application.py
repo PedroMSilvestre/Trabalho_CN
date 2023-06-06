@@ -222,11 +222,13 @@ def imgen():
 def saveFilesToBucketAndFileSystem():
     strFeedback = ""
 
+    # Inicializa a classe AmAwsS3Helper para obter as chaves de acesso e a região
     amS3 = AmAwsS3Helper(
         pStrCredentialsFilePath=app.config["AWS_FOLDER"] + "/credentials_for_iam_user_boto3_with_policy_AmazonS3FullAccess.txt",
         pStrConfigFilePath=app.config["AWS_FOLDER"] + "/config_for_region_eu_west2.txt"
     )
 
+    # Recebe os ficheiros e envia para o bucket
     dictUploadResults =\
         amS3.saveFlaskUploadedPluralFilesToS3Bucket(
             pStrBucketName=DESTINATION_BUCKET_NAME,
@@ -234,6 +236,7 @@ def saveFilesToBucketAndFileSystem():
             pStrCloudBucketDestinationPath=app.config["UPLOAD_FOLDER"]
         )
 
+    # Verifica o estado de cada upload
     for strSecureFilename in dictUploadResults.keys():
         bSaveResult = dictUploadResults[strSecureFilename]
 
@@ -246,6 +249,7 @@ def saveFilesToBucketAndFileSystem():
         strFeedback+="\n"
     #for
 
+    # É feito o render da página home, mas com os estados do upload
     return render_template('home.html', username=session["username"], strFeedback=strFeedback)
 #def saveFilesToBucketAndFileSystem
 
