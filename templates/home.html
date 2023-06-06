@@ -24,66 +24,12 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main_1.css">
 <!--===============================================================================================-->
 </head>
-<style>
-    @font-face {
-        font-family: Poppins-Bold;
-        src: url('../static/fonts/poppins/Poppins-Bold.ttf');
-    }
-
-    .title_home{
-        font-family: Poppins-Bold;
-        font-size: 60px;
-        color: #333333;
-        line-height: 1.2;
-        text-align: center;
-    }
-
-	.div_logout{
-		position: absolute; 
-		top: 1px; 
-		right:15px;
-		width: 100px;
-		height: 20px;
-	}
-
-	.form_home{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		position: absolute;
-  		top: 50%;
-  		left: 50%;
-		width: 500px;
-  		transform: translate(-50%, -50%);
-	}
-
-	.h1_upload_bucket{
-		margin-top: 40px;
-		margin-bottom: 20px;
-		font-family: Poppins-Bold;
-        font-size: 30px;
-        color: #333333;
-        line-height: 1.2;
-        text-align: center;
-	}
-	
-	.h1_random_img_gen{
-		margin-top: 20px;
-		margin-bottom: 10px;
-		font-family: Poppins-Bold;
-        font-size: 30px;
-        color: #333333;
-        line-height: 1.2;
-        text-align: center;
-	}
-
-</style>
 
 <body>
-    <h1 class="title_home">Welcome {{username}}</h1>
-    <!--<a style="position: absolute; top: 20px; right:20px;" href="/logout">Logout</a>-->
+    <h1 class="principal_title">Welcome {{username}}</h1>
 
 	<div class="div_logout">
 		<div class="container-login100-form-btn">
@@ -94,57 +40,7 @@
 		 </div>
 	</div>
 
-	<!--
-	<form action="/upload" method="POST" enctype="multipart/form-data">
-	 <div class="form_home">
-		 <div>
-			 <input
-			 multiple
-			 type="file"
-			 name="nameFiles"
-			 >
-		 </div>
-		 <br>
-		 <div class="container-login100-form-btn">
-			<div class="wrap-login100-form-btn">
-				<div class="login100-form-bgbtn"></div>
-					<button class="login100-form-btn">
-						Upload
-					</button>
-			</div>
-		 </div>
-		 <br>
-		 <div class="container-login100-form-btn">
-			<div class="wrap-login100-form-btn">
-				<div class="login100-form-bgbtn"></div>
-					<button class="login100-form-btn" type="reset">
-						Reset
-					</button>
-			</div>
-		 </div>
-		 <br>
-		 <div>
-			 {% if strFeedback %}
-			 <span style="display: block; text-align: center; color: red;">
-				{{ strFeedback }}
-			 </span>
-			 {% endif %}
-		 </div>
-		 <br>
-	 </div>
-	</form>
-	<br>
-		 <div class="container-login100-form-btn">
-			<div class="wrap-login100-form-btn">
-				<div class="login100-form-bgbtn"></div>
-					<button class="login100-form-btn" onclick="location.href='imgen'">
-						Random Image Generator
-					</button>
-			</div>
-		 </div>
-	-->
-
-	<div class="form_home">
+	<div class="div_home">
 		<h1 class="h1_upload_bucket">Upload to Bucket:</h1>
 		<form action="/upload" method="POST" enctype="multipart/form-data">
 			<div>
