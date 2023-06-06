@@ -6,7 +6,6 @@ import mysql.connector
 import os.path
 from amutil_cloud import AmAwsS3Helper
 
-# Atribuição do valor do input com o name "namefiles" à variavél HTML_FILE_ELEMENT_NAME
 HTML_FILE_ELEMENT_NAME = "nameFiles" #notice the plural
 
 # Nome do Bucket para o qual é feito o upload
