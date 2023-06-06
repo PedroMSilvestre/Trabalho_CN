@@ -34,17 +34,20 @@
     <title>Generate Images</title>
 </head>
 <body>
+	<!-- Título da página -->
     <h2 id="titulo_gen" class="principal_title">Generate Images</h2>
 
+	<!-- Botão Back -->
     <div class="div_back">
 		<div class="container-login100-form-btn">
 			<div class="wrap-login100-form-btn">
 				<div class="login100-form-bgbtn"></div>
-					<a class="login100-form-btn" href="/home">Home</a>
+					<a class="login100-form-btn" href="/home">Back</a>
 			</div>
 		 </div>
 	</div>
 
+	<!-- Botão Logout -->
     <div class="div_logout">
 		<div class="container-login100-form-btn">
 			<div class="wrap-login100-form-btn">
@@ -56,20 +59,23 @@
 
     <div class="div_elements">
         <form id="form_images">
+			<!-- Input Width -->
             <label id="Limage_width">Width:</label>
             <input id="width" min="1" placeholder="Insert Width px" type="number" class="input_all input_number">
 
+			<!-- Input Height -->
             <label id="Limage_height">Height:</label>
             <input id="height" min="1" placeholder="Insert Height px" type="number" class="input_all input_number">
         
+			<!-- Input Gray -->
             <label id="Limage_gray">Gray:</label>
             <input id="gray" type="checkbox" class="input_all">
 
+			<!-- Input Blur-->
             <label id="Limage_blur">Blur(1-10):</label>
             <input id="range_blur" max="10" min="0" step="1" type="range" value="0" class="input_all">
-        
-            <!--<input id="BtngenImg" type="submit" value="Generate Your Image"> -->
-            
+
+            <!-- Botão Generate Your Image -->
             <div class="container-login100-form-btn">
 				<div class="wrap-login100-form-btn">
 					<div class="login100-form-bgbtn"></div>
@@ -81,8 +87,10 @@
         </form>
     </div>    
 
+	<!-- Subtítulo - ID da Imagem -->
     <h2 id="idImg" class="h2_img"></h2>
 
+	<!-- Imagem -->
     <img alt="" id="img">
 
 <!--===============================================================================================-->

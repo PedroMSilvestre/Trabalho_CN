@@ -1,3 +1,4 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +30,10 @@
 </head>
 
 <body>
+	<!-- Título da página -->
     <h1 class="principal_title">Welcome {{username}}</h1>
 
+	<!-- Botão Logout-->
 	<div class="div_logout">
 		<div class="container-login100-form-btn">
 			<div class="wrap-login100-form-btn">
@@ -41,8 +44,10 @@
 	</div>
 
 	<div class="div_home">
-		<h1 class="h1_upload_bucket">Upload to Bucket:</h1>
+		<!-- Subtítulo - Upload file(s) to Bucket -->
+		<h1 class="h1_upload_bucket">Upload file(s) to Bucket:</h1>
 		<form action="/upload" method="POST" enctype="multipart/form-data">
+			<!-- Input para selecionar os ficheiros -->
 			<div>
 				<input
 				multiple
@@ -51,6 +56,7 @@
 				>
 			</div>
 			<br>
+			<!-- Botão Upload -->
 			<div class="container-login100-form-btn">
 				<div class="wrap-login100-form-btn">
 					<div class="login100-form-bgbtn"></div>
@@ -60,6 +66,7 @@
 				</div>
 			</div>
 			<br>
+			<!-- Botão Reset -->
 			<div class="container-login100-form-btn">
 				<div class="wrap-login100-form-btn">
 					<div class="login100-form-bgbtn"></div>
@@ -71,6 +78,7 @@
 			<br>
 		</form>
 		<br>
+		<!-- Mensagem de Aviso -->
 		<div>
 			{% if strFeedback %}
 			<span style="display: block; text-align: center;">
@@ -79,7 +87,9 @@
 			{% endif %}
 		</div>
 		<br>
+		<!-- Subtítulo - Visit Our Random Image Generator -->
 		<h1 class="h1_random_img_gen">Visit Our Random Image Generator:</h1>
+		<!-- Botão Random Image Generator -->
 		<div class="container-login100-form-btn">
 			<div class="wrap-login100-form-btn">
 				<div class="login100-form-bgbtn"></div>

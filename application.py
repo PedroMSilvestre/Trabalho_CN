@@ -1,10 +1,15 @@
+# application.py
+
 from db import *
 from flask import Flask, request, render_template, redirect, url_for, session
 import mysql.connector
 import os.path
 from amutil_cloud import AmAwsS3Helper
 
+# Atribuição do valor do input com o name "namefiles" à variavél HTML_FILE_ELEMENT_NAME
 HTML_FILE_ELEMENT_NAME = "nameFiles" #notice the plural
+
+# Nome do Bucket para o qual é feito o upload
 DESTINATION_BUCKET_NAME = "proto-test1"
 
 app = Flask(__name__)
@@ -93,12 +98,15 @@ def checkUserRegister(pUsername):
     else:
         return False
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Relacionado com a página inicial
 @app.route("/")
 def index():
     # É feito o render da página do login
     return render_template("login.html")
+# def index
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Relacionado com a página para o utilizador fazer o registo
 @app.route("/register", methods=["POST","GET"])
 def register():
@@ -148,6 +156,7 @@ def register():
     #if
 # def register
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Relacionado com a página para o utilizador fazer o login
 @app.route("/login", methods=["POST","GET"])
 def login():
@@ -172,15 +181,20 @@ def login():
             return render_template("login.html", warning_message=warning_message)
         # É feito o redirecionamento para a página inicial
         return redirect(url_for("index"))
+    # if
+# def login
 
-# Relacionado com a página para o utilizador fazer o logout
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Relacionado com o logout
 @app.route("/logout")
 def logout():
     # Para limpar a sessão
     session.clear()
     # É feito o redirecionamento para a página inicial
     return redirect(url_for("index"))
+# def logout
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Relacionado com a página home
 @app.route("/home", methods=["POST", "GET"])
 def home():
@@ -192,15 +206,18 @@ def home():
     else:
         # É feito o redirecionamento para a página inicial
         return redirect(url_for("index"))
+# def home
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Relacionado com a página Random Image Generator
 @app.route("/imgen", methods=["POST","GET"])
 def imgen():
     # É feito o render da página do Gerador de Imagens
     return render_template("imgen.html")
+# def imgen
 
-
-
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Relacionado com o upload do(s) ficheiro(s) para o bucket
 @app.route(rule="/upload", methods=['POST'])
 def saveFilesToBucketAndFileSystem():
     strFeedback = ""
@@ -232,8 +249,9 @@ def saveFilesToBucketAndFileSystem():
     return render_template('home.html', username=session["username"], strFeedback=strFeedback)
 #def saveFilesToBucketAndFileSystem
 
-
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     app.run(
         debug=True
     )
+# if

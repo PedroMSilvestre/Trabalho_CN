@@ -1,4 +1,4 @@
-/// img_gen.js
+// img_gen.js
 var form_image = document.getElementById('form_images');
 var IdImg = document.getElementById('idImg');
 

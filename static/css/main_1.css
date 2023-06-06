@@ -1,3 +1,4 @@
+/* main_1.css */
 @font-face {
     font-family: Poppins-Bold;
     src: url('../static/fonts/poppins/Poppins-Bold.ttf');
@@ -64,4 +65,10 @@
     color: #333333;
     line-height: 1.2;
     text-align: center;
+}
+
+.warning_message{
+    display: block; 
+    text-align: center; 
+    color: red;
 }
