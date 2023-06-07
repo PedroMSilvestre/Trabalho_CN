@@ -11,6 +11,7 @@ HTML_FILE_ELEMENT_NAME = "nameFiles" #notice the plural
 # Nome do Bucket para o qual é feito o upload
 DESTINATION_BUCKET_NAME = "proto-test1"
 
+# Para a criação da web app através da framework Flask
 app = Flask(__name__)
 
 app.config["UPLOAD_FOLDER"] = "" #do NOT start nor end with /
